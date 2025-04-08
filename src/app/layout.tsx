@@ -54,7 +54,7 @@ export default function RootLayout({
               onToggle={() => setIsRightSidebarOpen(!isRightSidebarOpen)}
             />
 
-            <AvatarPanel isOpen={isTranscriptOpen} onClose={() => setIsTranscriptOpen(false)} />
+            <AvatarPanel />
           </div>
         </QueryClientProvider>
       </body>
