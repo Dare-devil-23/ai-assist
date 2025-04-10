@@ -110,7 +110,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     }));
   };
   
-  const sidebarClasses = `w-64 border-r border-slate-200 rounded-xl bg-[#fbfbfa] overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
+  const sidebarClasses = `w-64 border-r border-slate-200 rounded-xl bg-[#fbfbfa] overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0 mt-[70px] md:mt-0 mb-[5px] ml-[5px]' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
   
   // Generate chapter icons based on chapter ID
   const getChapterIcon = (id: number) => {
@@ -129,14 +129,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="flex items-center">
             <span className="text-sm font-medium text-slate-700">Topics</span>
           </div>
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             className="lg:hidden h-7 w-7 rounded hover:bg-slate-100 text-slate-500"
             onClick={onClose}
           >
             <X className="h-3.5 w-3.5" />
-          </Button>
+          </Button> */}
         </div>
         <div className="relative">
           <Input

@@ -1,21 +1,18 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
-  HelpCircle, Menu, BrainCircuit, Bell, Settings, PanelLeft, 
-  PanelRight, MessageSquare, Mic, Volume2, Users, Presentation
+  BrainCircuit, Bell, Settings, 
+  MessageSquare, Users, Presentation
 } from "lucide-react";
 
 interface HeaderProps {
-  toggleLeftSidebar: () => void;
-  toggleRightSidebar: () => void;
   toggleTranscript: () => void;
 }
 
-export function MainHeader({ toggleLeftSidebar, toggleRightSidebar, toggleTranscript }: HeaderProps) {
+export function MainHeader({ toggleTranscript }: HeaderProps) {
   return (
     <header className="bg-white border-b border-slate-100 px-4 py-2.5 flex items-center justify-between sticky top-0 z-30 h-16 shadow-sm rounded-b-lg">
       <div className="flex items-center space-x-3">

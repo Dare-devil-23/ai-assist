@@ -28,6 +28,16 @@ export default function RootLayout({
     setIsRightSidebarOpen(false);
   }, [pathname]);
 
+  const handleRightSidebarToggle = () => {
+    setIsRightSidebarOpen(!isRightSidebarOpen);
+    setIsLeftSidebarOpen(false);
+  };
+
+  const handleLeftSidebarToggle = () => {
+    setIsLeftSidebarOpen(!isLeftSidebarOpen);
+    setIsRightSidebarOpen(false);
+  };
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -36,13 +46,11 @@ export default function RootLayout({
             <FloatingSidebar
               position="left"
               isOpen={isLeftSidebarOpen}
-              onToggle={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
+              onToggle={() => handleLeftSidebarToggle()}
             />
 
             <div className="flex-1 flex flex-col overflow-hidden">
               <MainHeader
-                toggleLeftSidebar={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
-                toggleRightSidebar={() => setIsRightSidebarOpen(!isRightSidebarOpen)}
                 toggleTranscript={() => setIsTranscriptOpen(!isTranscriptOpen)}
               />
               {children}
@@ -51,10 +59,13 @@ export default function RootLayout({
             <FloatingSidebar
               position="right"
               isOpen={isRightSidebarOpen}
-              onToggle={() => setIsRightSidebarOpen(!isRightSidebarOpen)}
+              onToggle={() => handleRightSidebarToggle()}
             />
 
-            <AvatarPanel />
+            <AvatarPanel 
+              isLeftSidebarOpen={isLeftSidebarOpen}
+              isRightSidebarOpen={isRightSidebarOpen}
+            />
           </div>
         </QueryClientProvider>
       </body>

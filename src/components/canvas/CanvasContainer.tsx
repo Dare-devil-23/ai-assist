@@ -266,7 +266,7 @@ export function CanvasContainer({ topicId, title, chapterTitle }: CanvasContaine
   }, [paperInstance, currentTool, currentColor]);
   
   return (
-    <div className="flex-1 flex flex-col overflow-hidden mx-20 rounded-xl">
+    <div className="flex-1 flex flex-col overflow-hidden md:mx-20 mb-14 md:mb-0 rounded-xl">
       <div className="flex items-center justify-between mb-3 px-1">
         <div className="cursor-text">
           <h2 className="text-3xl font-medium text-slate-900 mb-0.5">{title || "AI Tutorial"}</h2>
@@ -291,7 +291,7 @@ export function CanvasContainer({ topicId, title, chapterTitle }: CanvasContaine
         </div>
       </div>
       
-      <div className="flex-1 relative overflow-hidden bg-white border border-slate-200 rounded-xl shadow-lg" ref={containerRef}>
+      <div className="flex-1 relative overflow-hidden bg-white border border-slate-200 rounded-xl" ref={containerRef}>
         <canvas id="paper-canvas" ref={canvasRef} 
           className={`absolute inset-0 w-full h-full canvas-area ${
             currentTool === "eraser" ? "eraser" : 

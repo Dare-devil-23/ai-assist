@@ -10,13 +10,13 @@ export function CanvasPlaceholder() {
           Select a topic from the sidebar to start learning and drawing. Each topic provides interactive content and a canvas for your notes.
         </p>
         <div className="flex items-center justify-center">
-          <Link 
-            href="/topic/1"
+          <a 
+            href="https://user-1014105386081.asia-south1.run.app/oauth2/authorization/google"
             className="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
           >
             Start with Introduction to AI
             <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
