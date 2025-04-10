@@ -13,18 +13,19 @@ export function MainLayout({ children }: MainLayoutProps) {
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(true);
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
   const [isTranscriptOpen, setIsTranscriptOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("chapters");
   
   return (
     <div className="flex h-screen bg-slate-50">
       <Sidebar 
         isOpen={isLeftSidebarOpen} 
-        onClose={() => setIsLeftSidebarOpen(false)} 
+        onClose={() => setIsLeftSidebarOpen(false)}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
       />
       
       <div className="flex-1 flex flex-col overflow-hidden">
         <MainHeader 
-          toggleLeftSidebar={() => setIsLeftSidebarOpen(!isLeftSidebarOpen)}
-          toggleRightSidebar={() => setIsRightSidebarOpen(!isRightSidebarOpen)}
           toggleTranscript={() => setIsTranscriptOpen(!isTranscriptOpen)}
         />
         
