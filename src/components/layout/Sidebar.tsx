@@ -7,14 +7,19 @@ import { Input } from "@/components/ui/input";
 import { 
   Search, Plus, X, ChevronDown, ChevronRight, 
   BookOpen, Lightbulb, FileText, GraduationCap, 
-  Award, Activity, BookOpenCheck 
+  Award, Activity, BookOpenCheck, Brain, MessageSquare,
+  Book, BookOpenText, ClipboardList
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Textarea } from "@/components/ui/textarea";
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
+  activeTab: string;
+  onTabChange: (tab: string) => void;
 }
 
 // Dummy data
@@ -93,16 +98,17 @@ function TopicsList({ chapterId, expandedChapters, currentPath }: {
   );
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProps) {
   const currentPath = usePathname();
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedChapters, setExpandedChapters] = useState<Record<number, boolean>>({
-    1: true, // Expand first chapter by default
+    1: true,
     2: false,
     3: false
   });
+  const [genAIText, setGenAIText] = useState("");
+  const [isGenerated, setIsGenerated] = useState(false);
   
-  // Toggle chapter expansion
   const toggleChapter = (chapterId: number) => {
     setExpandedChapters(prev => ({
       ...prev,
@@ -110,9 +116,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     }));
   };
   
-  const sidebarClasses = `w-64 border-r border-slate-200 rounded-xl bg-[#fbfbfa] overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0 mt-[70px] md:mt-0 mb-[5px] ml-[5px]' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
+  const sidebarClasses = `w-80 rounded-xl bg-[#fbfbfa] overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0 mt-[70px] md:mt-0 mb-[5px] ml-[5px]' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
   
-  // Generate chapter icons based on chapter ID
   const getChapterIcon = (id: number) => {
     const icons = [
       <BookOpen className="h-4 w-4" />,
@@ -121,99 +126,143 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     ];
     return icons[id % icons.length];
   };
+
+  const handleGenerate = () => {
+    // TODO: Implement AI generation
+    console.log("Generating content:", genAIText);
+    setIsGenerated(true);
+  };
+
+  const handleAddToCanvas = () => {
+    // TODO: Implement adding generated content to canvas
+    console.log("Adding to canvas:", genAIText);
+  };
   
   return (
     <aside className={sidebarClasses}>
-      <div className="p-3 border-b border-slate-100">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center">
-            <span className="text-sm font-medium text-slate-700">Topics</span>
-          </div>
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden h-7 w-7 rounded hover:bg-slate-100 text-slate-500"
-            onClick={onClose}
-          >
-            <X className="h-3.5 w-3.5" />
-          </Button> */}
-        </div>
-        <div className="relative">
-          <Input
-            type="text"
-            placeholder="Search topics..."
-            className="w-full h-8 pl-8 pr-3 text-sm rounded bg-slate-50 border border-slate-100 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <Search className="h-3.5 w-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
-        </div>
-      </div>
-      
-      <nav className="px-3 pt-2 pb-4">
-        {dummyChapters.map((chapter) => (
-          <div key={chapter.id} className="mb-3">
-            <button 
-              className={`w-full flex items-center justify-between p-2 rounded-md text-left notion-block transition-all ${
-                expandedChapters[chapter.id] 
-                  ? 'text-blue-600' 
-                  : 'text-slate-700 hover:bg-slate-100'
-              }`}
-              onClick={() => toggleChapter(chapter.id)}
+      <Tabs value={activeTab} onValueChange={onTabChange} className="w-full">
+        <div className="border-b border-slate-100">
+          <TabsList className="w-full grid grid-cols-2 h-12 bg-transparent">
+            <TabsTrigger 
+              value="current" 
+              className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 data-[state=active]:shadow-none rounded-none border-b-2 data-[state=active]:border-blue-600"
             >
-              <div className="flex items-center">
-                <div className="w-5 flex items-center justify-center">
-                  {expandedChapters[chapter.id] ? (
-                    <ChevronDown className="h-3.5 w-3.5 text-slate-500" />
-                  ) : (
-                    <ChevronRight className="h-3.5 w-3.5 text-slate-500" />
-                  )}
-                </div>
-                <div className="w-5 h-5 flex items-center justify-center mr-2 text-slate-600">
-                  {getChapterIcon(chapter.id)}
-                </div>
-                <div>
-                  <span className="text-sm font-medium">{chapter.title}</span>
-                </div>
+              <BookOpen className="h-4 w-4 mr-2" />
+              Topics
+            </TabsTrigger>
+            <TabsTrigger 
+              value="genai" 
+              className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 data-[state=active]:shadow-none rounded-none border-b-2 data-[state=active]:border-blue-600"
+            >
+              <Brain className="h-4 w-4 mr-2" />
+              LMS
+            </TabsTrigger>
+          </TabsList>
+        </div>
+        
+        <TabsContent value="current" className="p-3">
+          <div className="relative mb-4">
+            <Input
+              type="text"
+              placeholder="Search topics..."
+              className="w-full h-8 pl-8 pr-3 text-sm rounded bg-slate-50 border border-slate-100 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <Search className="h-3.5 w-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+          </div>
+          
+          <nav>
+            {dummyChapters.map((chapter) => (
+              <div key={chapter.id} className="mb-3">
+                <button 
+                  className={`w-full flex items-center justify-between p-2 rounded-md text-left notion-block transition-all ${
+                    expandedChapters[chapter.id] 
+                      ? 'text-blue-600' 
+                      : 'text-slate-700 hover:bg-slate-100'
+                  }`}
+                  onClick={() => toggleChapter(chapter.id)}
+                >
+                  <div className="flex items-center">
+                    <div className="w-5 flex items-center justify-center">
+                      {expandedChapters[chapter.id] ? (
+                        <ChevronDown className="h-3.5 w-3.5 text-slate-500" />
+                      ) : (
+                        <ChevronRight className="h-3.5 w-3.5 text-slate-500" />
+                      )}
+                    </div>
+                    <div className="w-5 h-5 flex items-center justify-center mr-2 text-slate-600">
+                      {getChapterIcon(chapter.id)}
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium">{chapter.title}</span>
+                    </div>
+                  </div>
+                </button>
+                
+                {expandedChapters[chapter.id] && (
+                  <TopicsList 
+                    chapterId={chapter.id} 
+                    expandedChapters={expandedChapters} 
+                    currentPath={currentPath} 
+                  />
+                )}
               </div>
-            </button>
+            ))}
+          </nav>
+        </TabsContent>
+        
+        <TabsContent value="genai" className="p-3">
+          <div className="space-y-4">
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
+                <Book className="h-3 w-3 mr-1" />
+                Book
+              </Badge>
+              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
+                <Brain className="h-3 w-3 mr-1" />
+                AI Notes
+              </Badge>
+              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
+                <ClipboardList className="h-3 w-3 mr-1" />
+                Question Bank
+              </Badge>
+              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
+                <BookOpenText className="h-3 w-3 mr-1" />
+                Study Guide
+              </Badge>
+            </div>
             
-            {expandedChapters[chapter.id] && (
-              <TopicsList 
-                chapterId={chapter.id} 
-                expandedChapters={expandedChapters} 
-                currentPath={currentPath} 
-              />
-            )}
-          </div>
-        ))}
-        
-        <div className="mt-4 px-2">
-          <button 
-            className="w-full p-1.5 rounded-md notion-block text-left text-slate-500 hover:bg-slate-100 hover:text-slate-700 text-sm transition-colors flex items-center"
-          >
-            <div className="w-5 h-5 flex items-center justify-center mr-1.5">
-              <Plus className="h-3.5 w-3.5" />
+            <Textarea
+              placeholder="Enter your prompt here..."
+              className="min-h-[120px] text-sm"
+              value={genAIText}
+              onChange={(e) => setGenAIText(e.target.value)}
+            />
+            
+            <div className="space-y-2">
+              <Button 
+                className="w-full" 
+                onClick={handleGenerate}
+              >
+                <Brain className="h-4 w-4 mr-2" />
+                Generate
+              </Button>
+              
+              {isGenerated && (
+                <Button 
+                  className="w-full" 
+                  variant="outline"
+                  onClick={handleAddToCanvas}
+                >
+                  <MessageSquare className="h-4 w-4 mr-2" />
+                  Add to Canvas
+                </Button>
+              )}
             </div>
-            <span>Add a page</span>
-          </button>
-        </div>
-        
-        <div className="mt-8 px-3 pt-4 border-t border-slate-200">
-          <div className="bg-slate-50 rounded-lg p-3 text-sm text-slate-600">
-            <h3 className="font-medium text-slate-700 flex items-center mb-2">
-              <Award className="h-4 w-4 mr-1.5 text-amber-500" />
-              Progress
-            </h3>
-            <div className="w-full bg-slate-200 rounded-full h-2.5">
-              <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
-            </div>
-            <p className="mt-2 text-xs">
-              You've completed 9 out of 20 topics
-            </p>
           </div>
-        </div>
-      </nav>
+        </TabsContent>
+      </Tabs>
     </aside>
   );
 } 

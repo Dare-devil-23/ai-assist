@@ -367,7 +367,7 @@ export function CanvasContainer({ topicId, title, chapterTitle }: CanvasContaine
         )}
         
         {/* Floating toolbar at the bottom */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-[5]">
           <div className="floating-toolbar bg-white/95 backdrop-blur-sm rounded-full p-1.5 flex items-center shadow-lg border border-slate-200 transition-all">
             <CanvasToolbar 
               currentTool={currentTool} 

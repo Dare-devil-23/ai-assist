@@ -36,16 +36,6 @@ export function MainHeader({ toggleTranscript }: HeaderProps) {
         <Button 
           variant="outline" 
           size="sm" 
-          className="text-slate-600 border-slate-200 bg-white hover:bg-slate-50 focus:bg-slate-50 h-8 px-3 text-xs font-normal"
-          onClick={toggleTranscript}
-        >
-          <MessageSquare className="h-3.5 w-3.5 mr-1.5" />
-          Transcript
-        </Button>
-        
-        <Button 
-          variant="outline" 
-          size="sm" 
           className="text-slate-600 border-slate-200 bg-white hover:bg-slate-50 focus:bg-slate-50 h-8 px-2 text-xs hidden md:flex"
         >
           <Users className="h-3.5 w-3.5 mr-1.5" />
