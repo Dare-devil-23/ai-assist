@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function CanvasPlaceholder() {
   return (
-    <div className="flex-1 flex flex-col items-center justify-center bg-background rounded-xl mx-20">
+    <div className="flex-1 flex flex-col items-center justify-center bg-background rounded-xl mx-20 mt-3">
       <div className="text-center max-w-md">
         <h2 className="text-2xl font-medium text-slate-900 mb-3">Welcome to AI Tutorial</h2>
         <p className="text-slate-600 mb-6">

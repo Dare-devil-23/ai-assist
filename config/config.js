@@ -1,1 +1,1 @@
-module.exports = {"static":{"version":"0.1"},"server":{"port":""},"backendConfig":{"platform":{"domain":"https://platform-v2.fc.one","port":"","folder":""}},"analytics":{"ga":{"trackerId":"","domain":""}},"mode":"PROD"};
+module.exports = {"static":{"version":"0.1"},"server":{"port":"3000"},"backendConfig":{"platform":{"domain":"http://localhost","port":"8080","folder":""}},"analytics":{"ga":{"trackerId":"","domain":""}},"mode":"LOCAL","localServer":true};
