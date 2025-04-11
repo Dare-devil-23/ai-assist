@@ -15,11 +15,25 @@ export function TabContent({ activeTab, topicId }: TabContentProps) {
 
   React.useEffect(() => {
     // For now, we'll use a static markdown file from public folder
-    fetch('/ai-notes.md')
+    let path = "";
+
+    switch (activeTab) {
+      case 'book':
+        path = `/motion-in-straight-line.md`;
+        break;
+      case 'notes':
+        path = `/motion-in-straight-line-notes.md`;
+        break;
+      case 'questionBank':
+        path = `/motion-in-straight-line-questions.md`;
+        break;
+    }
+
+    fetch(path)
       .then(response => response.text())
       .then(text => setMarkdownContent(text))
       .catch(error => console.error('Error loading markdown file:', error));
-  }, []);
+  }, [activeTab]);
 
   const renderContent = () => {
     switch (activeTab) {
