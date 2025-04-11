@@ -3,7 +3,7 @@ import { CanvasPlaceholder } from "@/components/canvas/CanvasPlaceholder";
 
 export default function Home() {
   return (
-    <div className="flex h-screen bg-slate-50">
+    <div className="flex h-screen bg-secondary/40">
       <CanvasPlaceholder />
     </div>
   );

@@ -56,7 +56,7 @@ function TopicsList({ chapterId, expandedChapters, currentPath }: {
   
   if (topics.length === 0) {
     return (
-      <div className="ml-10 mt-2 text-sm p-2 text-slate-500 italic">
+      <div className="ml-10 mt-2 text-sm p-2 text-muted-foreground italic">
         No topics available
       </div>
     );
@@ -81,15 +81,15 @@ function TopicsList({ chapterId, expandedChapters, currentPath }: {
             key={topic.id} 
             href={`/topic/${topic.id}`}
             className={`group flex items-center p-1.5 rounded notion-block transition-all cursor-text ${isActive 
-              ? 'text-blue-600 bg-blue-50/60 font-medium' 
-              : 'text-slate-700 hover:bg-slate-100'}`}
+              ? 'text-primary bg-secondary/60 font-medium' 
+              : 'text-foreground hover:bg-secondary/50'}`}
           >
             <div className="w-4 h-4 flex items-center justify-center mr-1.5">
-              <div className={`h-1.5 w-1.5 rounded-full flex-shrink-0 ${isActive ? 'bg-blue-600' : 'bg-slate-400 group-hover:bg-blue-400'}`}></div>
+              <div className={`h-1.5 w-1.5 rounded-full flex-shrink-0 ${isActive ? 'bg-primary' : 'bg-muted-foreground group-hover:bg-primary/70'}`}></div>
             </div>
             <span className="flex-1 text-sm">{topic.title}</span>
             {topic.id === 2 && (
-              <Badge variant="outline" className="ml-2 text-xs bg-blue-50 text-blue-600 border-blue-100">New</Badge>
+              <Badge variant="outline" className="ml-2 text-xs bg-secondary text-primary border-border">New</Badge>
             )}
           </Link>
         );
@@ -116,7 +116,7 @@ export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProp
     }));
   };
   
-  const sidebarClasses = `w-80 rounded-xl bg-[#fbfbfa] overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0 mt-[70px] md:mt-0 mb-[5px] ml-[5px]' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
+  const sidebarClasses = `w-80 rounded-xl bg-background overflow-y-auto transition-all duration-300 ease-in-out transform ${isOpen ? 'lg:translate-x-0 translate-x-0 mt-[70px] md:mt-0 mb-[5px] ml-[5px]' : 'lg:translate-x-0 -translate-x-full'} lg:static fixed inset-y-0 left-0 z-10 pt-5 notion-sidebar`;
   
   const getChapterIcon = (id: number) => {
     const icons = [
@@ -141,18 +141,18 @@ export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProp
   return (
     <aside className={sidebarClasses}>
       <Tabs value={activeTab} onValueChange={onTabChange} className="w-full">
-        <div className="border-b border-slate-100">
-          <TabsList className="w-full grid grid-cols-2 h-12 bg-transparent">
+        <div className="px-3">
+          <TabsList className="bg-secondary/40 px-2">
             <TabsTrigger 
               value="current" 
-              className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 data-[state=active]:shadow-none rounded-none border-b-2 data-[state=active]:border-blue-600"
+              className="text-xs px-3 py-1.5 data-[state=active]:bg-background"
             >
               <BookOpen className="h-4 w-4 mr-2" />
               Topics
             </TabsTrigger>
             <TabsTrigger 
               value="genai" 
-              className="data-[state=active]:bg-blue-50 data-[state=active]:text-blue-600 data-[state=active]:shadow-none rounded-none border-b-2 data-[state=active]:border-blue-600"
+              className="text-xs px-3 py-1.5 data-[state=active]:bg-background"
             >
               <Brain className="h-4 w-4 mr-2" />
               LMS
@@ -165,11 +165,11 @@ export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProp
             <Input
               type="text"
               placeholder="Search topics..."
-              className="w-full h-8 pl-8 pr-3 text-sm rounded bg-slate-50 border border-slate-100 focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary"
+              className="w-full h-8 pl-8 pr-3 text-sm rounded bg-secondary/50 border border-border focus-visible:ring-1 focus-visible:ring-primary focus-visible:border-primary"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <Search className="h-3.5 w-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+            <Search className="h-3.5 w-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
           </div>
           
           <nav>
@@ -178,20 +178,20 @@ export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProp
                 <button 
                   className={`w-full flex items-center justify-between p-2 rounded-md text-left notion-block transition-all ${
                     expandedChapters[chapter.id] 
-                      ? 'text-blue-600' 
-                      : 'text-slate-700 hover:bg-slate-100'
+                      ? 'text-primary' 
+                      : 'text-foreground hover:bg-secondary/50'
                   }`}
                   onClick={() => toggleChapter(chapter.id)}
                 >
                   <div className="flex items-center">
                     <div className="w-5 flex items-center justify-center">
                       {expandedChapters[chapter.id] ? (
-                        <ChevronDown className="h-3.5 w-3.5 text-slate-500" />
+                        <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
                       ) : (
-                        <ChevronRight className="h-3.5 w-3.5 text-slate-500" />
+                        <ChevronRight className="h-3.5 w-3.5 text-muted-foreground" />
                       )}
                     </div>
-                    <div className="w-5 h-5 flex items-center justify-center mr-2 text-slate-600">
+                    <div className="w-5 h-5 flex items-center justify-center mr-2 text-muted-foreground">
                       {getChapterIcon(chapter.id)}
                     </div>
                     <div>
@@ -214,55 +214,49 @@ export function Sidebar({ isOpen, onClose, activeTab, onTabChange }: SidebarProp
         
         <TabsContent value="genai" className="p-3">
           <div className="space-y-4">
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                <Book className="h-3 w-3 mr-1" />
-                Book
-              </Badge>
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                <Brain className="h-3 w-3 mr-1" />
-                AI Notes
-              </Badge>
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                <ClipboardList className="h-3 w-3 mr-1" />
-                Question Bank
-              </Badge>
-              <Badge variant="outline" className="cursor-pointer hover:bg-blue-50">
-                <BookOpenText className="h-3 w-3 mr-1" />
-                Study Guide
-              </Badge>
+            <div>
+              <h3 className="text-sm font-medium mb-2 text-foreground">Generate Content with AI</h3>
+              <Textarea 
+                placeholder="Enter a prompt to generate content..." 
+                className="min-h-[100px] text-sm bg-secondary/50 border-border"
+                value={genAIText}
+                onChange={(e) => setGenAIText(e.target.value)}
+              />
             </div>
             
-            <Textarea
-              placeholder="Enter your prompt here..."
-              className="min-h-[120px] text-sm"
-              value={genAIText}
-              onChange={(e) => setGenAIText(e.target.value)}
-            />
-            
-            <div className="space-y-2">
+            <div className="flex space-x-2">
               <Button 
-                className="w-full" 
+                variant="default" 
+                size="sm" 
+                className="flex-1"
                 onClick={handleGenerate}
               >
-                <Brain className="h-4 w-4 mr-2" />
                 Generate
               </Button>
               
               {isGenerated && (
                 <Button 
-                  className="w-full" 
-                  variant="outline"
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
                   onClick={handleAddToCanvas}
                 >
-                  <MessageSquare className="h-4 w-4 mr-2" />
                   Add to Canvas
                 </Button>
               )}
             </div>
+            
+            {isGenerated && (
+              <div className="mt-4 p-3 bg-secondary/50 rounded-md border border-border">
+                <h4 className="text-xs font-medium mb-1 text-primary">Generated Content</h4>
+                <p className="text-xs text-foreground">
+                  Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn like humans. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.
+                </p>
+              </div>
+            )}
           </div>
         </TabsContent>
       </Tabs>
     </aside>
   );
-} 
+}

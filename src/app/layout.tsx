@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <QueryClientProvider client={queryClient}>
-          <div className="flex h-screen bg-slate-50">
+          <div className="flex h-screen bg-secondary/40">
             <FloatingSidebar
               position="left"
               isOpen={isLeftSidebarOpen}

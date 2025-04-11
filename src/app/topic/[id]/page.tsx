@@ -30,12 +30,10 @@ export default function TopicPage({ params }: { params: { id: string } }) {
   
   return (
     <MainContent>
-      <main className="flex-1 flex flex-col bg-slate-50 overflow-hidden">
+      <main className="flex-1 flex flex-col overflow-hidden">
         <div className="flex-1 flex overflow-hidden">
           <CanvasContainer 
             topicId={topicId} 
-            title={topic?.title} 
-            chapterTitle={chapter?.title}
           />
         </div>
       </main>

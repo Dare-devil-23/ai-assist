@@ -1,42 +1,57 @@
 "use client";
 
-import { useState } from "react";
-import { Sidebar } from "./Sidebar";
+import { useState, useEffect } from "react";
 import { MainHeader } from "./MainHeader";
-import { CanvasContainer } from "../canvas/CanvasContainer";
+import { FloatingSidebar } from "./FloatingSidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface MainLayoutProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export function MainLayout({ children }: MainLayoutProps) {
-  const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(true);
-  const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
-  const [isTranscriptOpen, setIsTranscriptOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("chapters");
-  
+  const [leftSidebarOpen, setLeftSidebarOpen] = useState(false);
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
+  const [transcriptOpen, setTranscriptOpen] = useState(false);
+  const isMobile = useIsMobile();
+
+  useEffect(() => {
+    // Close sidebars on mobile by default
+    if (isMobile) {
+      setLeftSidebarOpen(false);
+      setRightSidebarOpen(false);
+    } else {
+      // On desktop, open left sidebar by default
+      setLeftSidebarOpen(true);
+    }
+  }, [isMobile]);
+
+  const toggleTranscript = () => {
+    setTranscriptOpen(!transcriptOpen);
+    if (!rightSidebarOpen && !transcriptOpen) {
+      setRightSidebarOpen(true);
+    }
+  };
+
   return (
-    <div className="flex h-screen bg-slate-50">
-      <Sidebar 
-        isOpen={isLeftSidebarOpen} 
-        onClose={() => setIsLeftSidebarOpen(false)}
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-      />
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <MainHeader toggleTranscript={toggleTranscript} />
       
-      <div className="flex-1 flex flex-col overflow-hidden">
-        <MainHeader 
-          toggleTranscript={() => setIsTranscriptOpen(!isTranscriptOpen)}
+      <main className="flex-1 flex flex-col overflow-hidden relative pt-2 px-2 pb-4">
+        {children}
+        
+        <FloatingSidebar
+          position="left"
+          isOpen={leftSidebarOpen}
+          onToggle={() => setLeftSidebarOpen(!leftSidebarOpen)}
         />
         
-        <main className="flex-1 overflow-hidden p-4">
-          <CanvasContainer 
-            topicId={1}
-            title="What is Artificial Intelligence?"
-            chapterTitle="Introduction to AI"
-          />
-        </main>
-      </div>
+        <FloatingSidebar
+          position="right"
+          isOpen={rightSidebarOpen}
+          onToggle={() => setRightSidebarOpen(!rightSidebarOpen)}
+        />
+      </main>
     </div>
   );
-} 
+}

@@ -1,16 +1,7 @@
+import { Pen, Eraser, Type, Square, Circle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { 
-  Pencil, Square, Circle, 
-  Save, Palette, Type,
-  Eraser
-} from "lucide-react";
-import { 
-  Tooltip, 
-  TooltipContent, 
-  TooltipProvider, 
-  TooltipTrigger 
-} from "@/components/ui/tooltip";
-import { useState, useRef } from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 
 interface CanvasToolbarProps {
   currentTool: string;
@@ -20,181 +11,82 @@ interface CanvasToolbarProps {
   onSave: () => void;
 }
 
-export function CanvasToolbar({ 
-  currentTool, 
-  onChangeTool, 
-  currentColor, 
+export function CanvasToolbar({
+  currentTool,
+  onChangeTool,
+  currentColor,
   onChangeColor,
-  onSave,
+  onSave
 }: CanvasToolbarProps) {
-  const [colorPickerOpen, setColorPickerOpen] = useState(false);
-  const colorPickerRef = useRef<HTMLDivElement>(null);
-  
   const colors = [
-    { name: "blue", hex: "#0070F3" },
-    { name: "teal", hex: "#00BFA6" },
-    { name: "purple", hex: "#7C3AED" },
-    { name: "red", hex: "#EF4444" },
-    { name: "amber", hex: "#F59E0B" },
-    { name: "gray", hex: "#4B5563" },
-    { name: "black", hex: "#111827" }
+    { name: "Indigo", value: "#4F46E5" },
+    { name: "Rose", value: "#F43F5E" },
+    { name: "Amber", value: "#F59E0B" },
+    { name: "Emerald", value: "#10B981" },
+    { name: "Sky", value: "#0EA5E9" },
+    { name: "Violet", value: "#8B5CF6" },
+    { name: "Black", value: "#171717" },
   ];
-  
+
+  const tools = [
+    { name: "pen", icon: <Pen className="h-3.5 w-3.5" />, label: "Pen" },
+    { name: "eraser", icon: <Eraser className="h-3.5 w-3.5" />, label: "Eraser" },
+    { name: "text", icon: <Type className="h-3.5 w-3.5" />, label: "Text" },
+    { name: "rectangle", icon: <Square className="h-3.5 w-3.5" />, label: "Rectangle" },
+    { name: "circle", icon: <Circle className="h-3.5 w-3.5" />, label: "Circle" },
+  ];
+
   return (
-    <TooltipProvider delayDuration={300}>
-      <div className="flex items-center px-2 py-1.5 rounded-lg">
-        <div className="flex space-x-1">
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={`h-8 w-8 rounded-md ${currentTool === "pen" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "hover:bg-slate-100 text-slate-600"}`}
-                onClick={() => onChangeTool("pen")}
-              >
-                <Pencil className="h-4 w-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Pencil (P)</p>
-            </TooltipContent>
-          </Tooltip>
-          
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={`h-8 w-8 rounded-md ${currentTool === "text" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "hover:bg-slate-100 text-slate-600"}`}
-                onClick={() => onChangeTool("text")}
-              >
-                <Type className="h-4 w-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Text (T)</p>
-            </TooltipContent>
-          </Tooltip>
-          
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={`h-8 w-8 rounded-md ${currentTool === "shape" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "hover:bg-slate-100 text-slate-600"}`}
-                onClick={() => onChangeTool("shape")}
-              >
-                <Square className="h-4 w-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Rectangle (R)</p>
-            </TooltipContent>
-          </Tooltip>
-          
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={`h-8 w-8 rounded-md ${currentTool === "circle" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "hover:bg-slate-100 text-slate-600"}`}
-                onClick={() => onChangeTool("circle")}
-              >
-                <Circle className="h-4 w-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Circle (C)</p>
-            </TooltipContent>
-          </Tooltip>
-          
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={`h-8 w-8 rounded-md ${currentTool === "eraser" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "hover:bg-slate-100 text-slate-600"}`}
-                onClick={() => onChangeTool("eraser")}
-              >
-                <Eraser className="h-4 w-4" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Eraser (E)</p>
-            </TooltipContent>
-          </Tooltip>
-        </div>
-        
-        <div className="h-6 border-l border-slate-200 mx-2"></div>
-        
-        <div className="relative" ref={colorPickerRef}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="h-8 w-8 rounded-md hover:bg-slate-100 text-slate-600"
-                onClick={() => setColorPickerOpen(!colorPickerOpen)}
-              >
-                <Palette className="h-4 w-4" style={{color: currentColor}} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="text-xs">
-              <p>Color</p>
-            </TooltipContent>
-          </Tooltip>
-          
-          {colorPickerOpen && (
-            <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-white/95 rounded-lg shadow-lg p-2 border border-slate-200 backdrop-blur-sm z-20">
-              <div className="flex gap-1">
-                {colors.map((color) => (
-                  <button
-                    key={color.name}
-                    className={`w-5 h-5 rounded-full ${
-                      currentColor === color.hex ? "ring-1 ring-offset-1 ring-blue-500" : ""
-                    } transition-all hover:scale-110`}
-                    style={{ backgroundColor: color.hex }}
-                    onClick={() => {
-                      onChangeColor(color.hex);
-                      setColorPickerOpen(false);
-                    }}
-                    title={color.name}
-                    aria-label={`Select ${color.name} color`}
-                  />
-                ))}
-              </div>
-            </div>
+    <div className="flex items-center space-x-0.5 bg-background p-1 rounded-full">
+      {tools.map((tool) => (
+        <Button
+          key={tool.name}
+          variant="ghost"
+          size="sm"
+          className={cn(
+            "h-7 w-7 p-0 rounded-full",
+            currentTool === tool.name && "bg-secondary text-foreground"
           )}
-        </div>
-        
-        <div className="h-6 border-l border-slate-200 mx-2"></div>
-        
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="h-8 w-8 rounded-md hover:bg-slate-100 text-slate-600"
-              onClick={onSave}
-            >
-              <Save className="h-4 w-4" />
-            </Button>
-          </TooltipTrigger>
-          <TooltipContent side="bottom" className="text-xs">
-            <p>Save (⌘S)</p>
-          </TooltipContent>
-        </Tooltip>
-      </div>
-    </TooltipProvider>
+          onClick={() => onChangeTool(tool.name)}
+          title={tool.label}
+        >
+          {tool.icon}
+        </Button>
+      ))}
+
+      <div className="h-4 w-px bg-border mx-0.5"></div>
+
+      <Popover>
+        <PopoverTrigger asChild>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-7 w-7 p-0 rounded-full overflow-hidden"
+            title="Color"
+          >
+            <div
+              className="w-4 h-4 rounded-full"
+              style={{ backgroundColor: currentColor }}
+            />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-48 p-1.5 bg-background border-border shadow-md rounded-lg" align="center">
+          <div className="grid grid-cols-7 gap-1.5">
+            {colors.map((color) => (
+              <button
+                key={color.value}
+                className={cn(
+                  "w-5 h-5 rounded-full",
+                  currentColor === color.value && "ring-1.5 ring-primary ring-offset-1"
+                )}
+                style={{ backgroundColor: color.value }}
+                onClick={() => onChangeColor(color.value)}
+                title={color.name}
+              />
+            ))}
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
   );
-} 
+}

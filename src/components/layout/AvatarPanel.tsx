@@ -51,7 +51,7 @@ export function AvatarPanel({
   return (
     <div>
       <div className={cn(
-        "fixed md:hidden bottom-5 right-1/2 translate-x-1/2 md:translate-x-0 md:right-10 z-50 border border-slate-200 rounded-xl shadow-lg py-4 px-4 border-b border-slate-100 bg-white",
+        "fixed md:hidden bottom-5 right-1/2 translate-x-1/2 md:translate-x-0 md:right-10 z-50 border border-slate-200 rounded-xl shadow-lg py-4 px-4 border-b border-slate-100 bg-background",
         isMobile && (isLeftSidebarOpen || isRightSidebarOpen) && "hidden"
       )}>
         {/* AI Avatar - Center and larger */}
@@ -71,7 +71,7 @@ export function AvatarPanel({
 
             {/* Active speaking indicator */}
             {isSpeaking && (
-              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 flex items-center bg-white rounded-full px-2 py-0.5 shadow-sm border border-primary-100">
+              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 flex items-center bg-background rounded-full px-2 py-0.5 shadow-sm border border-primary-100">
                 <div className="flex items-end space-x-0.5 h-3">
                   <div className="wave-bar wave h-1.5 w-0.5 bg-primary-400 rounded-full"></div>
                   <div className="wave-bar wave h-2 w-0.5 bg-primary-500 rounded-full"></div>
@@ -88,7 +88,7 @@ export function AvatarPanel({
         </div>
 
       </div>
-      <div className="hidden md:inline fixed bottom-10 right-10 z-50 border border-slate-200 rounded-xl shadow-lg py-4 px-4 border-b border-slate-100 bg-white">
+      <div className="hidden md:inline fixed bottom-10 right-10 z-50 border border-slate-200 rounded-xl shadow-lg py-4 px-4 border-b border-slate-100 bg-background">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center">
             <h3 className="font-medium text-slate-900 text-base leading-tight mr-1.5">{name}</h3>

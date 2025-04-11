@@ -1,5 +1,4 @@
 // This file provides utility functions for working with Paper.js
-
 // Initialize Paper.js on a canvas element
 export function initializePaper(canvasId: string): any {
   if (typeof window === 'undefined') return null;
@@ -113,23 +112,6 @@ export function drawAIDiagram(paper: any, viewWidth: number, viewHeight: number)
     justification: 'center'
   });
   
-  // Add simple icons
-  const narrowIcon = new paper.Path.Circle({
-    center: [narrowAI.position.x, narrowAI.position.y - 40],
-    radius: 15,
-    fillColor: new paper.Color(0.31, 0.28, 0.9, 0.2),
-    strokeColor: new paper.Color(0.31, 0.28, 0.9),
-    strokeWidth: 2
-  });
-  
-  const generalIcon = new paper.Path.Circle({
-    center: [generalAI.position.x, generalAI.position.y - 40],
-    radius: 15,
-    fillColor: new paper.Color(0.06, 0.73, 0.51, 0.2),
-    strokeColor: new paper.Color(0.06, 0.73, 0.51),
-    strokeWidth: 2
-  });
-  
   paper.view.draw();
 }
 
@@ -175,13 +157,6 @@ export function updateCanvasSize(paper: any, width: number, height: number) {
 // Tool functions
 export function createPenTool(paper: any, color: string = '#4F46E5', width: number = 2) {
   if (!paper) return null;
-  
-  // Update cursor style to pencil
-  const canvasElement = document.getElementById('paper-canvas');
-  if (canvasElement) {
-    canvasElement.classList.add('canvas-area');
-    canvasElement.classList.remove('eraser', 'text-cursor', 'shape-cursor', 'circle-cursor');
-  }
   
   const tool = new paper.Tool();
   let path: any = null;
@@ -247,13 +222,6 @@ export function createPenTool(paper: any, color: string = '#4F46E5', width: numb
 export function createTextTool(paper: any, color: string = '#4F46E5', fontSize: number = 16) {
   if (!paper) return null;
   
-  // Update cursor style
-  const canvasElement = document.getElementById('paper-canvas');
-  if (canvasElement) {
-    canvasElement.classList.add('text-cursor');
-    canvasElement.classList.remove('canvas-area', 'eraser', 'shape-cursor', 'circle-cursor');
-  }
-  
   const tool = new paper.Tool();
   let textItem: any = null;
   
@@ -294,13 +262,6 @@ export function createTextTool(paper: any, color: string = '#4F46E5', fontSize: 
 export function createShapeTool(paper: any, color: string = '#4F46E5', width: number = 2) {
   if (!paper) return null;
   
-  // Update cursor style
-  const canvasElement = document.getElementById('paper-canvas');
-  if (canvasElement) {
-    canvasElement.classList.add('shape-cursor');
-    canvasElement.classList.remove('canvas-area', 'eraser', 'text-cursor', 'circle-cursor');
-  }
-  
   const tool = new paper.Tool();
   let rectangle: any = null;
   let startPoint: any = null;
@@ -335,13 +296,6 @@ export function createShapeTool(paper: any, color: string = '#4F46E5', width: nu
 // Create circle tool
 export function createCircleTool(paper: any, color: string = '#4F46E5', width: number = 2) {
   if (!paper) return null;
-  
-  // Update cursor style
-  const canvasElement = document.getElementById('paper-canvas');
-  if (canvasElement) {
-    canvasElement.classList.add('circle-cursor');
-    canvasElement.classList.remove('canvas-area', 'eraser', 'text-cursor', 'shape-cursor');
-  }
   
   const tool = new paper.Tool();
   let circle: any = null;
@@ -489,13 +443,6 @@ export function createAITool(paper: any) {
 // Create eraser tool
 export function createEraserTool(paper: any, width: number = 20) {
   if (!paper) return null;
-  
-  // Update cursor style to eraser
-  const canvasElement = document.getElementById('paper-canvas');
-  if (canvasElement) {
-    canvasElement.classList.add('eraser');
-    canvasElement.classList.remove('canvas-area', 'text-cursor', 'shape-cursor', 'circle-cursor');
-  }
   
   const tool = new paper.Tool();
   let eraserPath: any = null;

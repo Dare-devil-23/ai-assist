@@ -1,0 +1,1 @@
+module.exports = {"static":{"version":"0.1"},"server":{"port":""},"backendConfig":{"platform":{"domain":"https://platform-v2.fc.one","port":"","folder":""}},"analytics":{"ga":{"trackerId":"","domain":""}},"mode":"PROD"};

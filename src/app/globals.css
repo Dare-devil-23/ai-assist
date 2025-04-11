@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --background: 48 100% 98%;
+    --foreground: 220 20% 20%;
+    --card: 48 100% 98%;
+    --card-foreground: 220 20% 20%;
+    --popover: 48 100% 98%;
+    --popover-foreground: 220 20% 20%;
+    --primary: 220 20% 20%;
+    --primary-foreground: 48 100% 98%;
+    --secondary: 48 10% 90%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 48 10% 90%;
+    --muted-foreground: 220 20% 40%;
+    --accent: 48 20% 90%;
+    --accent-foreground: 220 20% 20%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --destructive-foreground: 48 100% 98%;
+    --border: 220 20% 85%;
+    --input: 220 20% 85%;
+    --ring: 220 20% 40%;
+    --radius: 0.3rem;
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 220 20% 12%;
+    --foreground: 48 10% 90%;
+    --card: 220 20% 12%;
+    --card-foreground: 48 10% 90%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 48 10% 90%;
+    --primary: 48 10% 90%;
+    --primary-foreground: 220 20% 12%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 48 10% 90%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 48 10% 70%;
+    --accent: 220 20% 18%;
+    --accent-foreground: 48 10% 90%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --destructive-foreground: 48 10% 90%;
+    --border: 220 20% 25%;
+    --input: 220 20% 25%;
+    --ring: 48 10% 70%;
   }
 }
 
@@ -60,23 +60,23 @@
 
 /* Custom styles */
 .notion-block {
-  @apply transition-colors duration-200;
+  @apply transition-colors duration-200 bg-background/50 hover:bg-secondary/50;
 }
 
 .canvas-area {
-  @apply cursor-default;
+  @apply cursor-default bg-background;
 }
 
 .canvas-area.eraser {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-opacity='0.3'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E") 12 12, auto;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='1.5' stroke-opacity='0.3'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3C/svg%3E") 12 12, auto;
 }
 
 .canvas-area.cursor-pen {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z'/%3E%3C/svg%3E") 0 24, auto;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='1.5'%3E%3Cpath d='M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z'/%3E%3C/svg%3E") 0 24, auto;
 }
 
 .canvas-area.cursor-crosshair {
-  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E") 12 12, crosshair;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='1.5'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cline x1='5' y1='12' x2='19' y2='12'/%3E%3C/svg%3E") 12 12, crosshair;
 }
 
 .canvas-area.cursor-text {
@@ -110,4 +110,4 @@
 
 .animate-[slide-up_150ms_ease-out] {
   animation: slide-up 150ms ease-out;
-} 
+}
