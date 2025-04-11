@@ -7,7 +7,7 @@ export function CanvasPlaceholder() {
     return isLocal ? "http://localhost:8080/oauth2/authorization/google" : "https://user-1014105386081.asia-south1.run.app/oauth2/authorization/google";
   };
   return (
-    <div className="flex-1 flex flex-col items-center justify-center bg-background rounded-xl mx-20 mt-3">
+    <div className="flex-1 flex flex-col items-center justify-center bg-background rounded-xl mx-20 my-3 ">
       <div className="text-center max-w-md">
         <h2 className="text-2xl font-medium text-slate-900 mb-3">Welcome to AI Tutorial</h2>
         <p className="text-slate-600 mb-6">
