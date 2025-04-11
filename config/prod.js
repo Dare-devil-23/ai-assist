@@ -5,7 +5,7 @@ module.exports = {
   mode: "PROD",
   backendConfig: {
     platform: {
-      domain: "https://platform-v2.fc.one",
+      domain: "https://user-1014105386081.asia-south1.run.app",
       port: "",
       folder: common.backendConfig.platform.folder,
     },

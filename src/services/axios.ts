@@ -1,5 +1,6 @@
 import axios, { InternalAxiosRequestConfig } from 'axios';
 import { formSubSystemPath, isBrowser, Auth, cookieUtils } from '@/services/utils';
+import config from '../../config/config.js';
 
 interface Config extends InternalAxiosRequestConfig {
   apiType?: string;
@@ -66,7 +67,10 @@ const fetchType = {
   }
 };
 
-export const fetch = axios.create();
+// Create axios instance with base URL
+export const fetch = axios.create({
+  baseURL: config.backendConfig.platform.domain + ':' + config.backendConfig.platform.port
+});
 
 fetch.defaults.withCredentials = true;
 
