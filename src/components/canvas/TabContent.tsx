@@ -44,7 +44,7 @@ export function TabContent({ activeTab, topicId }: TabContentProps) {
             rehypePlugins={[rehypeMathjax, rehypeRaw]}
             urlTransform={(url: string) => url}
             components={{
-              img: ({ node, ...props }) => <img {...props} className="max-w-full" />,
+              img: ({ node, ...props }) => props?.src && <img {...props} className="max-w-full" />,
               table: ({ node, ...props }) => <table {...props} className="border-collapse table-auto w-full" />,
               th: ({ node, ...props }) => <th {...props} className="border border-slate-300 dark:border-slate-700 px-4 py-2 text-left" />,
               td: ({ node, ...props }) => <td {...props} className="border border-slate-300 dark:border-slate-700 px-4 py-2" />
