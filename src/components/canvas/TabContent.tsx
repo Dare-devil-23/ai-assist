@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css';
-import DirectMathContent from './DirectMathContent';
+import rehypeRaw from 'rehype-raw';
+import rehypeMathjax from 'rehype-mathjax';
+import remarkGfm from 'remark-gfm';
 
 interface TabContentProps {
   activeTab: string;
@@ -40,13 +39,19 @@ export function TabContent({ activeTab, topicId }: TabContentProps) {
     if (activeTab === 'book' || activeTab === 'notes' || activeTab === 'questionBank') {
       return (
         <div className="prose max-w-none p-4 dark:prose-invert">
-          {/* <ReactMarkdown
-            remarkPlugins={[remarkGfm, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+          <ReactMarkdown
+            remarkPlugins={[remarkMath, remarkGfm]}
+            rehypePlugins={[rehypeMathjax, rehypeRaw]}
+            urlTransform={(url: string) => url}
+            components={{
+              img: ({ node, ...props }) => <img {...props} className="max-w-full" />,
+              table: ({ node, ...props }) => <table {...props} className="border-collapse table-auto w-full" />,
+              th: ({ node, ...props }) => <th {...props} className="border border-slate-300 dark:border-slate-700 px-4 py-2 text-left" />,
+              td: ({ node, ...props }) => <td {...props} className="border border-slate-300 dark:border-slate-700 px-4 py-2" />
+            }}
           >
             {markdownContent}
-          </ReactMarkdown> */}
-          <DirectMathContent content={markdownContent} />
+          </ReactMarkdown>
         </div>
       )
     } else {

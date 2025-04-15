@@ -12,29 +12,29 @@
 
 #### II. Velocity and Speed
    - **Average Velocity and Speed**
-     - Average velocity formula: \( v_{avg} = \frac{\Delta x}{\Delta t} \)
+     - Average velocity formula: $ v_{avg} = \frac{\Delta x}{\Delta t} $
      - Average speed: Total distance traveled divided by total time (scalar quantity).
    - **Instantaneous Velocity and Speed**
      - Definition and differentiation between average and instantaneous velocity.
-     - Instantaneous velocity formula: \( v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} \)
+     - Instantaneous velocity formula: $ v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} $
      - Graphical representation: **Figure 2.1** (Position vs. time graph).
 
 #### III. Acceleration
    - **Definition and Types of Acceleration**
      - Average and instantaneous acceleration.
-     - Average acceleration formula: \( \bar{a} = \frac{v_2 - v_1}{t_2 - t_1} = \frac{\Delta v}{\Delta t} \)
-     - Instantaneous acceleration formula: \( a = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv}{dt} \)
+     - Average acceleration formula: $ \bar{a} = \frac{v_2 - v_1}{t_2 - t_1} = \frac{\Delta v}{\Delta t} $
+     - Instantaneous acceleration formula: $ a = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv}{dt} $
    - **Graphical Representations**
      - **Figure 2.2**: Position-time graphs for various accelerations.
      - **Figure 2.3**: Velocity-time graphs for constant acceleration.
 
 #### IV. Kinematic Equations for Uniformly Accelerated Motion
    - **Derivation and Formulas**
-     - \( v = v_0 + at \)
-     - \( x = v_0t + \frac{1}{2}at^2 \)
-     - \( v^2 = v_0^2 + 2ax \)
+     - $ v = v_0 + at $
+     - $ x = v_0t + \frac{1}{2}at^2 $
+     - $ v^2 = v_0^2 + 2ax $
    - **Graphical Representations and Applications**
-     - **Figure 2.4**: Area under \( v-t \) curve representing displacement.
+     - **Figure 2.4**: Area under $ v-t $ curve representing displacement.
      - **Figure 2.5**: Graphical representation of kinematic equations.
      - **Figure 2.6**: Illustration of a ball thrown vertically upwards.
      - **Figure 2.7**: Graphs showing motion under free fall.
@@ -42,8 +42,8 @@
 #### V. Practical Applications and Experiments
    - **Galileo's Law of Odd Numbers**
    - **Stopping Distance and Reaction Time**
-     - Stopping distance formula: \( d_s = \frac{-v_0^2}{2a} \)
-     - Reaction time calculation: \( t_r = \sqrt{\frac{2d}{g}} \)
+     - Stopping distance formula: $ d_s = \frac{-v_0^2}{2a} $
+     - Reaction time calculation: $ t_r = \sqrt{\frac{2d}{g}} $
      - **Figure 2.8**: Experiment setup for measuring reaction time using a falling ruler.
 
 #### VI. Analysis and Interpretation of Motion Graphs
@@ -70,11 +70,11 @@ This structured outline ensures a logical progression from fundamental concepts 
 #### Multiple Choice Questions
 
 1. **What is the formula for average velocity?**
-   - A) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-   - B) \( v_{avg} = \frac{\Delta t}{\Delta x} \)
-   - C) \( v_{avg} = \Delta x \times \Delta t \)
-   - D) \( v_{avg} = \frac{v_2 + v_1}{2} \)
-   - **Answer:** A) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
+   - A) $ v_{avg} = \frac{\Delta x}{\Delta t} $
+   - B) $ v_{avg} = \frac{\Delta t}{\Delta x} $
+   - C) $ v_{avg} = \Delta x \times \Delta t $
+   - D) $ v_{avg} = \frac{v_2 + v_1}{2} $
+   - **Answer:** A) $ v_{avg} = \frac{\Delta x}{\Delta t} $
 
 2. **Which of the following is a scalar quantity?**
    - A) Velocity
@@ -91,11 +91,11 @@ This structured outline ensures a logical progression from fundamental concepts 
    - **Answer:** C) Displacement
 
 4. **Which equation is NOT one of the kinematic equations for uniformly accelerated motion?**
-   - A) \( v = v_0 + at \)
-   - B) \( x = v_0t + \frac{1}{2}at^2 \)
-   - C) \( v^2 = v_0^2 + 2ax \)
-   - D) \( a = \frac{v^2 - v_0^2}{2x} \)
-   - **Answer:** D) \( a = \frac{v^2 - v_0^2}{2x} \) (This is a rearrangement and not a standard form)
+   - A) $ v = v_0 + at $
+   - B) $ x = v_0t + \frac{1}{2}at^2 $
+   - C) $ v^2 = v_0^2 + 2ax $
+   - D) $ a = \frac{v^2 - v_0^2}{2x} $
+   - **Answer:** D) $ a = \frac{v^2 - v_0^2}{2x} $ (This is a rearrangement and not a standard form)
 
 5. **What does the instantaneous velocity represent?**
    - A) The velocity at a specific point in time
@@ -114,7 +114,7 @@ This structured outline ensures a logical progression from fundamental concepts 
 
 #### Long Form Questions
 
-9. **Derive the kinematic equation \( x = v_0t + \frac{1}{2}at^2 \) starting from the definition of acceleration.**
+9. **Derive the kinematic equation $ x = v_0t + \frac{1}{2}at^2 $ starting from the definition of acceleration.**
 
 10. **Discuss the practical applications of the kinematic equations in real-world scenarios, such as in traffic accident analysis or sports physics.**
 
@@ -122,17 +122,17 @@ This structured outline ensures a logical progression from fundamental concepts 
 
 11. **Refer to the provided velocity-time graph (Figure 2.4). Calculate the displacement of the object from t=0s to t=5s.**
 
-![Velocity-Time Graph](data:image/jpeg;base64,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
+![Velocity-Time Graph](data:image/jpeg;base64,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)
 
 ### Question Bank: Motion in a Straight Line
 
 #### Multiple Choice Questions
 
 1. **What is the formula for average velocity?**
-   - A) \( v_{avg} = \frac{v_1 + v_2}{2} \)
-   - B) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-   - C) \( v_{avg} = \frac{x_1 + x_2}{t_1 + t_2} \)
-   - D) \( v_{avg} = \Delta x \times \Delta t \)
+   - A) $ v_{avg} = \frac{v_1 + v_2}{2} $
+   - B) $ v_{avg} = \frac{\Delta x}{\Delta t} $
+   - C) $ v_{avg} = \frac{x_1 + x_2}{t_1 + t_2} $
+   - D) $ v_{avg} = \Delta x \times \Delta t $
    - **Answer:** B
 
 2. **Instantaneous velocity is defined as:**
@@ -150,9 +150,9 @@ This structured outline ensures a logical progression from fundamental concepts 
    - **Answer:** D
 
 4. **If a car accelerates uniformly from rest, which of the following equations can be used to find its velocity after time t?**
-   - A) \( v = v_0 + at \)
-   - B) \( x = v_0t + \frac{1}{2}at^2 \)
-   - C) \( v^2 = v_0^2 + 2ax \)
+   - A) $ v = v_0 + at $
+   - B) $ x = v_0t + \frac{1}{2}at^2 $
+   - C) $ v^2 = v_0^2 + 2ax $
    - D) All of the above
    - **Answer:** A
 
@@ -173,13 +173,13 @@ This structured outline ensures a logical progression from fundamental concepts 
 
 #### Long Form Questions
 
-9. **Derive the kinematic equation \( v^2 = v_0^2 + 2ax \) starting from \( v = v_0 + at \) and \( x = v_0t + \frac{1}{2}at^2 \).**
+9. **Derive the kinematic equation $ v^2 = v_0^2 + 2ax $ starting from $ v = v_0 + at $ and $ x = v_0t + \frac{1}{2}at^2 $.**
 
 10. **Discuss the practical applications of the kinematic equations in real-world scenarios such as car safety testing or sports.**
 
 #### Diagram-Based Questions
 
-11. **Refer to Figure 2.4 (Area under \( v-t \) curve representing displacement). Explain what the area under the curve represents and how it relates to the motion of the object.**
+11. **Refer to Figure 2.4 (Area under $ v-t $ curve representing displacement). Explain what the area under the curve represents and how it relates to the motion of the object.**
 
 12. **Using Figure 2.7 (Graphs showing motion under free fall), analyze the motion of a ball thrown vertically upwards and then falling back to the ground.**
 
@@ -272,12 +272,12 @@ These questions cover a range of difficulty levels and types, from basic recall 
    **Answer:** C) The velocity at a specific instant of time.
 
 2. **Which formula represents the calculation of instantaneous velocity?**
-   - A) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-   - B) \( v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} \)
-   - C) \( v^2 = v_0^2 + 2ax \)
-   - D) \( x = v_0t + \frac{1}{2}at^2 \)
+   - A) $ v_{avg} = \frac{\Delta x}{\Delta t} $
+   - B) $ v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} $
+   - C) $ v^2 = v_0^2 + 2ax $
+   - D) $ x = v_0t + \frac{1}{2}at^2 $
    
-   **Answer:** B) \( v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} \)
+   **Answer:** B) $ v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} $
 
 3. **What is the difference between average speed and instantaneous speed?**
    - A) There is no difference; both terms describe the same concept.
@@ -303,13 +303,13 @@ These questions cover a range of difficulty levels and types, from basic recall 
 
 6. **Describe how the numerical method can help in understanding the concept of instantaneous velocity.**
 
-   **Answer Hint:** Refer to the process of calculating \(\Delta x / \Delta t\) for decreasing values of \(\Delta t\) and finding the limiting value.
+   **Answer Hint:** Refer to the process of calculating $\Delta x / \Delta t$ for decreasing values of $\Delta t$ and finding the limiting value.
 
 #### Long Form Questions
 
-7. **Given the position function \( x(t) = 0.08t^3 \), calculate the instantaneous velocity at \( t = 6 \) seconds using the definition of derivative. Show all steps.**
+7. **Given the position function $ x(t) = 0.08t^3 $, calculate the instantaneous velocity at $ t = 6 $ seconds using the definition of derivative. Show all steps.**
 
-   **Answer Hint:** Use the derivative formula \( v = \frac{dx}{dt} \), apply it to the given function, and substitute \( t = 6 \) into the derived formula.
+   **Answer Hint:** Use the derivative formula $ v = \frac{dx}{dt} $, apply it to the given function, and substitute $ t = 6 $ into the derived formula.
 
 8. **Discuss the significance of the limit process in the calculation of instantaneous velocity and how it differs from average velocity computation.**
 
@@ -360,7 +360,7 @@ These questions cover a range of topics related to instantaneous velocity and sp
    - **Answer: B) Object moving in a positive direction with negative acceleration.**
 
 5. **Kinematic Equations Application:**
-   Using the kinematic equation \( v = v_0 + at \), calculate the final velocity of an object that starts from rest, accelerates at 2 m/s² for a duration of 10 seconds.
+   Using the kinematic equation $ v = v_0 + at $, calculate the final velocity of an object that starts from rest, accelerates at 2 m/s² for a duration of 10 seconds.
    - A) 10 m/s
    - B) 20 m/s
    - C) 5 m/s
@@ -394,7 +394,7 @@ These questions cover a range of topics related to instantaneous velocity and sp
 
 7. **To find the displacement from a velocity-time graph, calculate the area under the curve between the two time points. This area represents the displacement.**
 
-8. **Use the formula \( s = v_0t + \frac{1}{2}at^2 \). Here, \( v_0 = 3 \) m/s, \( a = 4 \) m/s², \( t = 5 \) s.**
+8. **Use the formula $ s = v_0t + \frac{1}{2}at^2 $. Here, $ v_0 = 3 $ m/s, $ a = 4 $ m/s², $ t = 5 $ s.**
 
 9. **Instantaneous velocity at any point can be determined by finding the slope of the tangent to the curve at that point.**
 
@@ -407,11 +407,11 @@ These questions cover a range of topics related to instantaneous velocity and sp
 #### Multiple Choice Questions
 
 1. **Which of the following equations is NOT one of the kinematic equations for uniformly accelerated motion?**
-   - A) \( v = v_0 + at \)
-   - B) \( x = v_0t + \frac{1}{2}at^2 \)
-   - C) \( v^2 = v_0^2 + 2ax \)
-   - D) \( x = \frac{v + v_0}{2} \cdot t \)
-   - **Answer:** D) \( x = \frac{v + v_0}{2} \cdot t \) (This is the formula for average velocity, not a kinematic equation)
+   - A) $ v = v_0 + at $
+   - B) $ x = v_0t + \frac{1}{2}at^2 $
+   - C) $ v^2 = v_0^2 + 2ax $
+   - D) $ x = \frac{v + v_0}{2} \cdot t $
+   - **Answer:** D) $ x = \frac{v + v_0}{2} \cdot t $ (This is the formula for average velocity, not a kinematic equation)
 
 2. **If the acceleration of an object is negative, which of the following is true?**
    - A) The object is necessarily slowing down.
@@ -432,21 +432,21 @@ These questions cover a range of topics related to instantaneous velocity and sp
 4. **Define instantaneous acceleration.**
    - **Answer:** Instantaneous acceleration is the rate of change of velocity at a specific instant in time. It is the derivative of velocity with respect to time.
 
-5. **Explain why the kinematic equation \( x = v_0t + \frac{1}{2}at^2 \) includes the term \(\frac{1}{2}at^2\).**
-   - **Answer:** The term \(\frac{1}{2}at^2\) represents the displacement due to acceleration over time \(t\), starting from rest. It is derived from the integral of the acceleration function, assuming constant acceleration.
+5. **Explain why the kinematic equation $ x = v_0t + \frac{1}{2}at^2 $ includes the term $\frac{1}{2}at^2$.**
+   - **Answer:** The term $\frac{1}{2}at^2$ represents the displacement due to acceleration over time $t$, starting from rest. It is derived from the integral of the acceleration function, assuming constant acceleration.
 
 #### Long Form Questions
 
 6. **A car accelerates uniformly from rest and travels 200 meters in 10 seconds. Calculate the acceleration of the car and its final velocity at the end of 10 seconds.**
-   - **Solution Hint:** Use the kinematic equation \( x = v_0t + \frac{1}{2}at^2 \) to find acceleration and then use \( v = v_0 + at \) to find the final velocity.
+   - **Solution Hint:** Use the kinematic equation $ x = v_0t + \frac{1}{2}at^2 $ to find acceleration and then use $ v = v_0 + at $ to find the final velocity.
 
-7. **A ball is thrown vertically upward with an initial velocity of 15 m/s. Calculate the maximum height reached by the ball and the total time taken for the ball to return to the thrower's hand. Assume \( g = 9.8 \, m/s^2 \).**
-   - **Solution Hint:** Use \( v^2 = v_0^2 + 2ax \) to find the maximum height (where \( v = 0 \) at maximum height). Use the kinematic equations to find the time to reach maximum height and then double it for the total time of flight.
+7. **A ball is thrown vertically upward with an initial velocity of 15 m/s. Calculate the maximum height reached by the ball and the total time taken for the ball to return to the thrower's hand. Assume $ g = 9.8 \, m/s^2 $.**
+   - **Solution Hint:** Use $ v^2 = v_0^2 + 2ax $ to find the maximum height (where $ v = 0 $ at maximum height). Use the kinematic equations to find the time to reach maximum height and then double it for the total time of flight.
 
 #### Diagram-Based Question
 
 8. **Refer to Fig. 2.6. If the ball is thrown from a height of 25 meters with an initial velocity of 20 m/s, use the kinematic equations to determine how long it will take for the ball to hit the ground.**
-   - **Solution Hint:** Set up the equation \( y = y_0 + v_0t + \frac{1}{2}at^2 \) with \( y_0 = 25 \, m \), \( v_0 = 20 \, m/s \), and \( a = -9.8 \, m/s^2 \). Solve for \( t \) when \( y = 0 \).
+   - **Solution Hint:** Set up the equation $ y = y_0 + v_0t + \frac{1}{2}at^2 $ with $ y_0 = 25 \, m $, $ v_0 = 20 \, m/s $, and $ a = -9.8 \, m/s^2 $. Solve for $ t $ when $ y = 0 $.
 
 These questions cover a range of difficulties and types, ensuring a comprehensive understanding of the kinematic equations for uniformly accelerated motion.
 
@@ -464,18 +464,18 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
 
 2. **Average Velocity and Speed**
    - Which formula represents the average velocity?
-     - A) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-     - B) \( v_{avg} = \frac{\Delta t}{\Delta x} \)
-     - C) \( v_{avg} = \Delta x \times \Delta t \)
-     - D) \( v_{avg} = \frac{v_2 + v_1}{2} \)
+     - A) $ v_{avg} = \frac{\Delta x}{\Delta t} $
+     - B) $ v_{avg} = \frac{\Delta t}{\Delta x} $
+     - C) $ v_{avg} = \Delta x \times \Delta t $
+     - D) $ v_{avg} = \frac{v_2 + v_1}{2} $
      - **Answer: A**
 
 3. **Instantaneous Velocity**
    - Instantaneous velocity is calculated as:
-     - A) \( v = \frac{\Delta x}{\Delta t} \)
-     - B) \( v = \frac{dx}{dt} \)
-     - C) \( v = \Delta x \times \Delta t \)
-     - D) \( v = \frac{v_2 + v_1}{2} \)
+     - A) $ v = \frac{\Delta x}{\Delta t} $
+     - B) $ v = \frac{dx}{dt} $
+     - C) $ v = \Delta x \times \Delta t $
+     - D) $ v = \frac{v_2 + v_1}{2} $
      - **Answer: B**
 
 4. **Acceleration**
@@ -488,9 +488,9 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
 
 5. **Kinematic Equations**
    - Which kinematic equation would you use to find the final velocity of an object in free fall if you know the initial velocity, acceleration, and time?
-     - A) \( v = v_0 + at \)
-     - B) \( x = v_0t + \frac{1}{2}at^2 \)
-     - C) \( v^2 = v_0^2 + 2ax \)
+     - A) $ v = v_0 + at $
+     - B) $ x = v_0t + \frac{1}{2}at^2 $
+     - C) $ v^2 = v_0^2 + 2ax $
      - D) All of the above
      - **Answer: A**
 
@@ -524,15 +524,15 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
     - A car traveling at 25 m/s comes to a stop in 4 seconds after the brakes are applied. Calculate the stopping distance using the appropriate kinematic equation.
 
 13. **Reaction Time Experiment**
-    - If a person catches a falling ruler at a mark of 15 cm, calculate their reaction time. Assume \( g = 9.8 \text{ m/s}^2 \).
+    - If a person catches a falling ruler at a mark of 15 cm, calculate their reaction time. Assume $ g = 9.8 \text{ m/s}^2 $.
 
 ### Answers to Calculation Problems
 
 12. **Stopping Distance Calculation**
-   - Use \( v^2 = v_0^2 + 2ax \). Here, \( v = 0 \), \( v_0 = 25 \text{ m/s} \), and \( t = 4 \text{ s} \). First, find \( a \) using \( a = \frac{v - v_0}{t} \). Then, solve for \( x \) (stopping distance).
+   - Use $ v^2 = v_0^2 + 2ax $. Here, $ v = 0 $, $ v_0 = 25 \text{ m/s} $, and $ t = 4 \text{ s} $. First, find $ a $ using $ a = \frac{v - v_0}{t} $. Then, solve for $ x $ (stopping distance).
 
 13. **Reaction Time Experiment**
-   - Use \( d = \frac{1}{2} g t_r^2 \). Solve for \( t_r \) giving \( t_r = \sqrt{\frac{2d}{g}} \) where \( d = 0.15 \text{ m} \) and \( g = 9.8 \text{ m/s}^2 \).
+   - Use $ d = \frac{1}{2} g t_r^2 $. Solve for $ t_r $ giving $ t_r = \sqrt{\frac{2d}{g}} $ where $ d = 0.15 \text{ m} $ and $ g = 9.8 \text{ m/s}^2 $.
 
 ### Question Bank: Motion in a Straight Line
 
@@ -552,12 +552,12 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
    - D) It is always equal to the average velocity.
    - **Answer: C** - Instantaneous velocity is defined as the limit of the average velocity as the time interval approaches zero.
 
-3. **What does the area under the velocity-time curve represent between two times \( t_1 \) and \( t_2 \)?**
+3. **What does the area under the velocity-time curve represent between two times $ t_1 $ and $ t_2 $?**
    - A) Total velocity
    - B) Average acceleration
    - C) Displacement
    - D) Average speed
-   - **Answer: C** - The area under the velocity-time curve represents the displacement between \( t_1 \) and \( t_2 \).
+   - **Answer: C** - The area under the velocity-time curve represents the displacement between $ t_1 $ and $ t_2 $.
 
 4. **For an object moving with uniform acceleration, what is the shape of the position-time graph?**
    - A) Straight line
@@ -569,15 +569,15 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
 #### Short Answer Questions
 
 5. **Define average acceleration and provide the formula used to calculate it.**
-   - **Answer:** Average acceleration is the change in velocity divided by the time interval during which the change occurs. It is calculated using the formula \( \bar{a} = \frac{\Delta v}{\Delta t} \).
+   - **Answer:** Average acceleration is the change in velocity divided by the time interval during which the change occurs. It is calculated using the formula $ \bar{a} = \frac{\Delta v}{\Delta t} $.
 
 6. **Explain the significance of the sign of displacement in one-dimensional motion.**
    - **Answer:** In one-dimensional motion, the sign of displacement indicates the direction of the motion relative to a chosen origin. Positive displacement indicates movement to the right of the origin, while negative displacement indicates movement to the left.
 
 #### Long Form Questions
 
-7. **Derive the kinematic equation \( v^2 = v_0^2 + 2ax \) from \( v = v_0 + at \) and \( x = v_0t + \frac{1}{2}at^2 \).**
-   - **Solution Hint:** Start by expressing \( t \) from the first equation and substituting it into the second equation. Then, simplify to derive the third equation.
+7. **Derive the kinematic equation $ v^2 = v_0^2 + 2ax $ from $ v = v_0 + at $ and $ x = v_0t + \frac{1}{2}at^2 $.**
+   - **Solution Hint:** Start by expressing $ t $ from the first equation and substituting it into the second equation. Then, simplify to derive the third equation.
 
 8. **Discuss the physical meaning of the slope of the tangent to the position-time graph and the velocity-time graph.**
    - **Answer:** The slope of the tangent to the position-time graph at any point gives the instantaneous velocity at that point. Similarly, the slope of the tangent to the velocity-time graph at any point gives the instantaneous acceleration at that point.
@@ -585,7 +585,7 @@ These questions cover a range of difficulties and types, ensuring a comprehensiv
 #### Diagram-Based Question
 
 9. **Refer to a hypothetical velocity-time graph where the line is a straight slope upwards from the origin. Describe the motion of the object and calculate the displacement after 5 seconds if the slope is 3 m/s².**
-   - **Answer:** The object is undergoing uniform acceleration. The displacement can be calculated using the area under the velocity-time graph, which forms a right triangle in this case. Displacement \( x = \frac{1}{2} \times base \times height = \frac{1}{2} \times 5 \times (3 \times 5) = 37.5 \) meters.
+   - **Answer:** The object is undergoing uniform acceleration. The displacement can be calculated using the area under the velocity-time graph, which forms a right triangle in this case. Displacement $ x = \frac{1}{2} \times base \times height = \frac{1}{2} \times 5 \times (3 \times 5) = 37.5 $ meters.
 
 These questions cover a range of topics and difficulty levels from the provided section, ensuring a comprehensive understanding of the concepts of motion in a straight line.
 
@@ -627,8 +627,8 @@ These questions cover a range of topics and difficulty levels from the provided 
 6. **Discuss the importance of choosing a reference direction in kinematics and how it affects the signs of velocity and acceleration. Provide an example with calculations.**
    - **Answer Hint:** Use the concept of positive and negative directions and how they influence the calculation of displacement, velocity, and acceleration.
 
-7. **Using the kinematic equations, solve a problem where a ball is thrown vertically upwards with an initial velocity of 20 m/s. Calculate the time it takes to reach the highest point and the height reached. Assume \( g = 9.8 \, m/s^2 \).**
-   - **Answer Hint:** Use \( v = v_0 + at \) and \( x = v_0t + \frac{1}{2}at^2 \), remembering to consider the direction of acceleration due to gravity.
+7. **Using the kinematic equations, solve a problem where a ball is thrown vertically upwards with an initial velocity of 20 m/s. Calculate the time it takes to reach the highest point and the height reached. Assume $ g = 9.8 \, m/s^2 $.**
+   - **Answer Hint:** Use $ v = v_0 + at $ and $ x = v_0t + \frac{1}{2}at^2 $, remembering to consider the direction of acceleration due to gravity.
 
 #### Diagram-Based Question
 
@@ -654,7 +654,7 @@ These questions cover a range of difficulties and types, from basic conceptual u
    - D) Both A and C are correct.
    - **Answer: C**
 
-2. **An object moves along a straight path with a velocity \( v = -4 \, \text{m/s} \). What is the direction of acceleration if the object is slowing down?**
+2. **An object moves along a straight path with a velocity $ v = -4 \, \text{m/s} $. What is the direction of acceleration if the object is slowing down?**
    - A) In the positive direction
    - B) In the negative direction
    - C) Zero acceleration
@@ -668,12 +668,12 @@ These questions cover a range of difficulties and types, from basic conceptual u
    - D) Graph d
    - **Answer: D (if it shows multiple values of position at the same time)**
 
-4. **A car moving with a speed of \(126 \, \text{km/h}\) comes to a stop in 200 m. What is the magnitude of its acceleration?**
-   - A) \( -4.9 \, \text{m/s}^2 \)
-   - B) \( -8.8 \, \text{m/s}^2 \)
-   - C) \( -7.0 \, \text{m/s}^2 \)
-   - D) \( -9.8 \, \text{m/s}^2 \)
-   - **Answer: C (Using \( v^2 = v_0^2 + 2ax \))**
+4. **A car moving with a speed of $126 \, \text{km/h}$ comes to a stop in 200 m. What is the magnitude of its acceleration?**
+   - A) $ -4.9 \, \text{m/s}^2 $
+   - B) $ -8.8 \, \text{m/s}^2 $
+   - C) $ -7.0 \, \text{m/s}^2 $
+   - D) $ -9.8 \, \text{m/s}^2 $
+   - **Answer: C (Using $ v^2 = v_0^2 + 2ax $)**
 
 5. **Which statement is true for a particle moving in one dimension with a constant speed?**
    - A) The acceleration of the particle is non-zero.
@@ -688,15 +688,15 @@ These questions cover a range of difficulties and types, from basic conceptual u
 
 7. **Describe the difference between average speed and magnitude of average velocity using a suitable example.**
 
-8. **Calculate the retardation of a car that stops from a speed of \(90 \, \text{km/h}\) in a distance of 100 meters.**
+8. **Calculate the retardation of a car that stops from a speed of $90 \, \text{km/h}$ in a distance of 100 meters.**
 
 #### Long Form Questions
 
-9. **A ball is thrown vertically upwards with a speed of \( 20 \, \text{m/s} \). Calculate the time taken to reach the highest point and the maximum height reached. Assume \( g = 9.8 \, \text{m/s}^2 \).**
+9. **A ball is thrown vertically upwards with a speed of $ 20 \, \text{m/s} $. Calculate the time taken to reach the highest point and the maximum height reached. Assume $ g = 9.8 \, \text{m/s}^2 $.**
 
-10. **Discuss the motion of a particle represented by the position-time graph in Fig. 2.11 for \( t < 0 \) and \( t > 0 \). Provide a physical context where such a motion might occur.**
+10. **Discuss the motion of a particle represented by the position-time graph in Fig. 2.11 for $ t < 0 $ and $ t > 0 $. Provide a physical context where such a motion might occur.**
 
-11. **A bullet is fired from a gun with a speed of \( 150 \, \text{m/s} \) at a target moving away at \( 20 \, \text{m/s} \). Calculate the relative speed of the bullet with respect to the target at the moment of firing.**
+11. **A bullet is fired from a gun with a speed of $ 150 \, \text{m/s} $ at a target moving away at $ 20 \, \text{m/s} $. Calculate the relative speed of the bullet with respect to the target at the moment of firing.**
 
 12. **Analyze the velocity-time graph (Fig. 2.3) for an object moving with constant acceleration and describe the motion.**
 
@@ -714,10 +714,10 @@ These questions cover a range of difficulties and types, from basic conceptual u
 
 **Question 1:**  
 What is the formula for average velocity?  
-A) \( v_{avg} = \frac{\Delta x}{\Delta t} \)  
-B) \( v_{avg} = \frac{\Delta t}{\Delta x} \)  
-C) \( v_{avg} = \Delta x \times \Delta t \)  
-D) \( v_{avg} = \frac{v_0 + v}{2} \)
+A) $ v_{avg} = \frac{\Delta x}{\Delta t} $  
+B) $ v_{avg} = \frac{\Delta t}{\Delta x} $  
+C) $ v_{avg} = \Delta x \times \Delta t $  
+D) $ v_{avg} = \frac{v_0 + v}{2} $
 
 *Answer: A*
 
@@ -731,13 +731,13 @@ D) Its displacement is zero.
 *Answer: A*
 
 **Question 3:**  
-If a car moving with an acceleration of \( 2 \, \text{m/s}^2 \) increases its velocity from \( 10 \, \text{m/s} \) to \( 20 \, \text{m/s} \), how much time does it take to achieve this change?  
+If a car moving with an acceleration of $ 2 \, \text{m/s}^2 $ increases its velocity from $ 10 \, \text{m/s} $ to $ 20 \, \text{m/s} $, how much time does it take to achieve this change?  
 A) 10 seconds  
 B) 5 seconds  
 C) 15 seconds  
 D) 20 seconds
 
-*Answer: B (Using \( a = \frac{\Delta v}{\Delta t} \))*
+*Answer: B (Using $ a = \frac{\Delta v}{\Delta t} $)*
 
 #### Short Answer Questions
 
@@ -750,7 +750,7 @@ A runner completes a 400 m lap in 50 seconds. Calculate the runner's average spe
 #### Long Form Questions
 
 **Question 6:**  
-A ball is thrown straight up with an initial velocity of \( 20 \, \text{m/s} \). Using the kinematic equation \( v = v_0 + at \), calculate the time it takes for the ball to reach its maximum height. Assume acceleration due to gravity is \( -9.8 \, \text{m/s}^2 \).
+A ball is thrown straight up with an initial velocity of $ 20 \, \text{m/s} $. Using the kinematic equation $ v = v_0 + at $, calculate the time it takes for the ball to reach its maximum height. Assume acceleration due to gravity is $ -9.8 \, \text{m/s}^2 $.
 
 **Question 7:**  
 Describe the motion of a particle with zero acceleration. Provide examples from real-life scenarios where this might occur.
@@ -767,7 +767,7 @@ D) All intervals have the same average speed
 *Answer: Explain reasoning based on the slope of the graph.*
 
 **Question 9 (Refer to Fig. 2.13):**  
-At \( t = 0.3 \, \text{s} \), what are the signs of position, velocity, and acceleration of the particle executing simple harmonic motion?  
+At $ t = 0.3 \, \text{s} $, what are the signs of position, velocity, and acceleration of the particle executing simple harmonic motion?  
 A) Positive, Negative, Positive  
 B) Negative, Positive, Negative  
 C) Positive, Positive, Negative  
@@ -778,7 +778,7 @@ D) Negative, Negative, Positive
 #### Application Questions
 
 **Question 10:**  
-A car accelerates uniformly from rest to a speed of \( 30 \, \text{m/s} \) over a distance of \( 150 \, \text{m} \). Use the kinematic equation \( v^2 = v_0^2 + 2ax \) to find the acceleration.
+A car accelerates uniformly from rest to a speed of $ 30 \, \text{m/s} $ over a distance of $ 150 \, \text{m} $. Use the kinematic equation $ v^2 = v_0^2 + 2ax $ to find the acceleration.
 
 **Question 11:**  
 Discuss how the concepts of velocity and acceleration apply to the launch of a spacecraft. Include considerations for changes in velocity and the role of gravitational acceleration.
@@ -791,17 +791,17 @@ These questions cover a range of topics and difficulty levels within the theme o
 #### Multiple Choice Questions
 
 1. **What is the formula for average velocity?**
-   - A) \( v_{avg} = \frac{v_2 + v_1}{2} \)
-   - B) \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-   - C) \( v_{avg} = \frac{x_2 + x_1}{t_2 + t_1} \)
-   - D) \( v_{avg} = \frac{\Delta t}{\Delta x} \)
+   - A) $ v_{avg} = \frac{v_2 + v_1}{2} $
+   - B) $ v_{avg} = \frac{\Delta x}{\Delta t} $
+   - C) $ v_{avg} = \frac{x_2 + x_1}{t_2 + t_1} $
+   - D) $ v_{avg} = \frac{\Delta t}{\Delta x} $
    - **Answer: B**
 
 2. **Which of the following statements best describes instantaneous velocity?**
    - A) It is the velocity over a large interval of time.
    - B) It is the velocity at a specific point in time.
    - C) It is always equal to the average velocity.
-   - D) It can be calculated using the formula \( v = \frac{\Delta x}{\Delta t} \).
+   - D) It can be calculated using the formula $ v = \frac{\Delta x}{\Delta t} $.
    - **Answer: B**
 
 3. **In Figure 2.15, during which interval is the average acceleration greatest in magnitude?**
@@ -826,7 +826,7 @@ These questions cover a range of topics and difficulty levels within the theme o
 
 #### Long Form Questions
 
-7. **Derive the kinematic equation \( v^2 = v_0^2 + 2ax \) from the basic definitions of velocity and acceleration. Include all steps and necessary assumptions.**
+7. **Derive the kinematic equation $ v^2 = v_0^2 + 2ax $ from the basic definitions of velocity and acceleration. Include all steps and necessary assumptions.**
 
 8. **Given the position-time graph in Figure 2.15, sketch the corresponding velocity-time graph. Explain how you determined the shape and key points of the graph.**
 
@@ -835,8 +835,8 @@ These questions cover a range of topics and difficulty levels within the theme o
 9. **Refer to Figure 2.15. Calculate the average velocity and average acceleration for Interval 1. Assume each interval represents a time period of 2 seconds and the speed changes are from 0 m/s to 10 m/s, 10 m/s to 20 m/s, and 20 m/s back to 10 m/s respectively.**
 
    - **Solution Hint:**
-     - Average velocity for Interval 1: \( v_{avg} = \frac{\Delta x}{\Delta t} \)
-     - Average acceleration for Interval 1: \( a_{avg} = \frac{\Delta v}{\Delta t} \)
+     - Average velocity for Interval 1: $ v_{avg} = \frac{\Delta x}{\Delta t} $
+     - Average acceleration for Interval 1: $ a_{avg} = \frac{\Delta v}{\Delta t} $
 
 #### Advanced Application Question
 
@@ -852,7 +852,7 @@ These questions cover a range of topics and difficulty levels within the theme o
 
 8. **The velocity-time graph would be a series of straight lines corresponding to the constant accelerations in each interval. The slopes of these lines would be determined by the acceleration values, with positive slopes for positive accelerations and negative slopes for negative accelerations. Key points would be determined by the changes in acceleration at the boundaries of the intervals.**
 
-9. **Average velocity for Interval 1: \( v_{avg} = \frac{10 \, \text{m/s} + 0 \, \text{m/s}}{2} = 5 \, \text{m/s} \)**
-   - **Average acceleration for Interval 1: \( a_{avg} = \frac{20 \, \text{m/s} - 10 \, \text{m/s}}{2 \, \text{s}} = 5 \, \text{m/s}^2 \)**
+9. **Average velocity for Interval 1: $ v_{avg} = \frac{10 \, \text{m/s} + 0 \, \text{m/s}}{2} = 5 \, \text{m/s} $**
+   - **Average acceleration for Interval 1: $ a_{avg} = \frac{20 \, \text{m/s} - 10 \, \text{m/s}}{2 \, \text{s}} = 5 \, \text{m/s}^2 $**
 
 10. **If the same patterns continue, the object would start decelerating further in the next interval. Physically, this could represent an object moving under conditions where forces acting against the motion (like friction or air resistance) are increasing. However, without additional forces being applied, the object cannot accelerate indefinitely in the real world.**

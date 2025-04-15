@@ -6,7 +6,7 @@
     "robotTextGenerator": "node ./scripts/generateRobotsTxt.ts",
     "createConfig": "node ./scripts/createConfig.ts",
     "dev": "set NODE_ENV=local && npm run createConfig && npm run robotTextGenerator && next dev -p 3000",
-    "build": "export NODE_ENV=prod && npm run createConfig && npm run robotTextGenerator && next build",
+    "build": "set NODE_ENV=prod && npm run createConfig && npm run robotTextGenerator && next build",
     "build:qa": "export NODE_ENV=qa && npm run createConfig && npm run robotTextGenerator && next build",
     "start": "next start",
     "lint": "next lint"
@@ -64,6 +64,8 @@
     "react-resizable-panels": "^2.1.7",
     "recharts": "^2.15.2",
     "rehype-katex": "^7.0.1",
+    "rehype-mathjax": "^7.1.0",
+    "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
     "tailwind-merge": "^2.6.0",
