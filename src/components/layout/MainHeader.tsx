@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { 
   BrainCircuit, Bell, Settings, 
-  MessageSquare, Users, Presentation
 } from "lucide-react";
 
 interface HeaderProps {
@@ -30,26 +28,6 @@ export function MainHeader({ toggleTranscript }: HeaderProps) {
         </div>
         
         <div className="flex items-center space-x-1.5">
-          {/* <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-foreground border-border bg-background hover:bg-secondary focus:bg-secondary h-8 px-2 text-xs hidden md:flex"
-          >
-            <Users className="h-3.5 w-3.5 mr-1.5" />
-            Share
-          </Button>
-          
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-foreground border-border bg-background hover:bg-secondary focus:bg-secondary h-8 px-2 text-xs hidden md:flex"
-          >
-            <Presentation className="h-3.5 w-3.5 mr-1.5" />
-            Present
-          </Button>
-          
-          <div className="h-6 mx-1 border-r border-border hidden md:block"></div> */}
-          
           <Button 
             variant="ghost" 
             size="icon" 

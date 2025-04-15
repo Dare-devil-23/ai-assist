@@ -5,7 +5,7 @@
   "scripts": {
     "robotTextGenerator": "node ./scripts/generateRobotsTxt.ts",
     "createConfig": "node ./scripts/createConfig.ts",
-    "dev": "export NODE_ENV=local && npm run createConfig && npm run robotTextGenerator && next dev -p 3000",
+    "dev": "set NODE_ENV=local && npm run createConfig && npm run robotTextGenerator && next dev -p 3000",
     "build": "export NODE_ENV=prod && npm run createConfig && npm run robotTextGenerator && next build",
     "build:qa": "export NODE_ENV=qa && npm run createConfig && npm run robotTextGenerator && next build",
     "start": "next start",
@@ -41,6 +41,7 @@
     "@radix-ui/react-tooltip": "^1.2.0",
     "@tanstack/react-query": "^5.72.0",
     "axios": "^1.8.4",
+    "better-react-mathjax": "^2.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
